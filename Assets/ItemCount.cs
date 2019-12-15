@@ -12,6 +12,8 @@ public class ItemCount : MonoBehaviour
     private bool show = false;
     public TextMeshPro coinCount;
     public TextMeshPro fragCount;
+    public TextMeshPro pauseCoins;
+    public TextMeshPro pauseFrags;
 
     private void Awake()
     {
@@ -23,6 +25,8 @@ public class ItemCount : MonoBehaviour
 
         coinCount.text = GameData.Instance.coinCount.ToString();
         fragCount.text = GameData.Instance.FragCount.ToString();
+        pauseCoins.text = "Coins: " + GameData.Instance.coinCount.ToString();
+        pauseFrags.text = "Fragments: " + GameData.Instance.FragCount.ToString();
 
         if (show == true)
         {
